@@ -1,0 +1,17 @@
+//? Page("/") Style Sheet
+
+#page-home {
+  .button-wrapper {
+    width: 100%;
+    .button {
+      margin: 70px 0;
+    }
+  }
+
+  .blog {
+    padding-bottom: 50px;
+    .article-subtitle {
+      margin-bottom: 30px;
+    }
+  }
+}

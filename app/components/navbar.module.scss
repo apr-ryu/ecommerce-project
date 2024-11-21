@@ -1,0 +1,80 @@
+@import "../mixin.scss";
+
+#Navbar {
+  width: 100vw;
+  height: 55px;
+  background-color: #f8f9fa;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 50;
+  @include flex-between;
+  @include no-ghost;
+  > div {
+    width: 30%;
+    font-size: 13px;
+    @media all and (max-width: 1200px) {
+      width: 40%;
+    }
+    // ! LEFT SIDE : FLOATING MENU
+    &:first-child {
+      font-weight: 300;
+      letter-spacing: 0.5px;
+      @include flex-start;
+
+      > div {
+        width: 50%;
+        @include flex-center;
+        cursor: default;
+        @media all and (max-width: 1200px) {
+          font-size: 12px;
+        }
+      }
+    }
+
+    // ! RIGHT SIDE: SEARCH, CART, USER
+    &:last-child {
+      @include flex;
+      justify-content: flex-end;
+      margin-right: 10px;
+      // ! SEARCH
+      input {
+        border: none;
+        border-bottom: 1px solid rgb(206, 206, 206);
+        background-color: transparent;
+        padding: 3px 5px;
+        font-size: 13px;
+        width: 50%;
+        // ! ICONS
+        ~ div {
+          padding: 10px;
+          margin-right: 10px;
+          font-size: 14px;
+          @include flex-center;
+          @media all and (max-width: 1200px) {
+            margin: 0;
+          }
+          &:nth-child(3) {
+            svg {
+              margin-right: 2px;
+            }
+          }
+          :hover {
+            @include cursor;
+          }
+        }
+      }
+    }
+  }
+
+  // ! MAIN LOGO
+  h1 {
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: 2px;
+    @include cursor;
+    @media all and (max-width: 1200px) {
+      font-size: 20px;
+    }
+  }
+}

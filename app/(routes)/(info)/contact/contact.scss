@@ -1,0 +1,20 @@
+#contact {
+  padding: 20px;
+  min-height: calc(100vh - 55px);
+  .article-contents {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 1000px;
+    margin: 0 auto;
+    @media all and (max-width: 1200px) {
+      width: calc(100% - 80px);
+    }
+    > p.article-contents-paragraph {
+      text-align: center;
+    }
+    iframe {
+      margin: 50px;
+    }
+  }
+}
